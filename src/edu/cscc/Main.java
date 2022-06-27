@@ -1,10 +1,19 @@
 package edu.cscc;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import edu.cscc.mvc.framework.MVCContext;
+import edu.cscc.mvc.framework.Request;
+
+import java.lang.reflect.InvocationTargetException;
 
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("LacklusterVideo");
+        MVCContext mvcContext = new MVCContext("edu.cscc.controllers");
+        try {
+            mvcContext.processRequest(new Request("Home", "index"));
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
