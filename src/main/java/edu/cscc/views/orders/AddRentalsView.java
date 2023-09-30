@@ -18,10 +18,10 @@ public class AddRentalsView {
             System.out.println("1. Add a rental");
             System.out.println("2. Complete order");
             System.out.println("3. Manage orders");
-            System.out.print("Choice: ");
+            System.out.println("Choice: ");
             Integer choice = scanner.nextInt();
             if (choice == 1) {
-                System.out.print("Rental ID: ");
+                System.out.println("Rental ID: ");
                 Integer rentalId = scanner.nextInt();
                 rentalIds.add(rentalId);
             } else if (choice == 2) {
