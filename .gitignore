@@ -1,21 +1,12 @@
-# Gradle
+# Ignore Gradle project-specific cache directory
 .gradle
-build/
 
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Eclipse
-/.classpath
-/.settings/
-/.project
-/bin/
-
-# IntelliJ
-.idea/workspace.xml
-*.ipr
-*.iws
+# Ignore Gradle build output directory
+build
 out
 
-# Misc
-*.log
+# Data directory
+mysql-data
+
+.idea
+*.iml
